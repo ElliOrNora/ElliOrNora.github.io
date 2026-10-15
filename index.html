@@ -8,6 +8,26 @@
     <style>
         .footer {margin-top: 80px;}
         h1 {margin-top: 5px;}
+
+        /* Галерея: по умолчанию 1 картинка в ряд */
+        .gallery { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+        .gallery-item { width: 100%; padding: 8px; box-sizing: border-box; }
+        .gallery-item img { width: 100%; height: auto; display: block; }
+
+        /* 2 в ряд (2×3) — от 576px */
+        @media (min-width: 576px) {
+            .gallery-item { width: 50%; }
+        }
+
+        /* 3 в ряд (3×2) — от 768px */
+        @media (min-width: 768px) {
+            .gallery-item { width: 33.3333%; }
+        }
+
+        /* 6 в ряд (6×1) — от 1200px */
+        @media (min-width: 1200px) {
+            .gallery-item { width: 16.6666%; }
+        }
     </style>
   </head>
   <body>
@@ -20,7 +40,6 @@
       <h1>Породы кошек и виды котов</h1>
       <p>Мир кошек удивителен и разнообразен.</p>
 
-      <!-- Блочный элемент и список (Задание 1) -->
       <section class="mb-4">
         <h2>Популярные породы</h2>
         <ul>
@@ -30,24 +49,24 @@
         </ul>
       </section>
 
-      <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2386006989-640x427.jpg" class="img-fluid" alt="Шотландская вислоухая">
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2386006989-640x427.jpg" alt="Шотландская вислоухая">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_1073446478-640x427.jpg" class="img-fluid" alt="Бенгальская кошка">
+        <div class="gallery-item">
+          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_1073446478-640x427.jpg" alt="Бенгальская кошка">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2514586673-640x427.jpg" class="img-fluid" alt="Британская короткошёрстная">
+        <div class="gallery-item">
+          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2514586673-640x427.jpg" alt="Британская короткошёрстная">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2428724909-1-640x424.jpg" class="img-fluid" alt="Русская голубая">
+        <div class="gallery-item">
+          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2428724909-1-640x424.jpg" alt="Русская голубая">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2608042173-640x427.jpg" class="img-fluid" alt="Рагамаффин">
+        <div class="gallery-item">
+          <img src="https://news-img.gismeteo.st/ru/2025/06/shutterstock_2608042173-640x427.jpg" alt="Рагамаффин">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
-          <img src="https://avatars.mds.yandex.net/i?id=99628cb441bcc0f940c28b9787820091_l-5681290-images-thumbs&n=13" class="img-fluid" alt="Египетская">
+        <div class="gallery-item">
+          <img src="https://avatars.mds.yandex.net/i?id=99628cb441bcc0f940c28b9787820091_l-5681290-images-thumbs&n=13" alt="Египетская">
         </div>
       </div>
     </main>
