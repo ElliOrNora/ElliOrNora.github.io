@@ -9,22 +9,16 @@
         .footer {margin-top: 80px;}
         h1 {margin-top: 5px;}
 
-        /* Галерея: по умолчанию 1 картинка в ряд */
         .gallery { display: flex; flex-wrap: wrap; margin: 0 -8px; }
         .gallery-item { width: 100%; padding: 8px; box-sizing: border-box; }
         .gallery-item img { width: 100%; height: auto; display: block; }
 
-        /* 2 в ряд (2×3) — от 576px */
         @media (min-width: 576px) {
             .gallery-item { width: 50%; }
         }
-
-        /* 3 в ряд (3×2) — от 768px */
         @media (min-width: 768px) {
             .gallery-item { width: 33.3333%; }
         }
-
-        /* 6 в ряд (6×1) — от 1200px */
         @media (min-width: 1200px) {
             .gallery-item { width: 16.6666%; }
         }
